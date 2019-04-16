@@ -267,9 +267,9 @@ public class RancherUtils {
 			logger.error("create namespace failed!");
 	}
 	
-	public List<Service> listService(String clusterId) throws IOException{
+	public List<Service> listService(String projectId) throws IOException{
 		ServiceService serviceService = client.type(ServiceService.class);
-		List<Service> list = serviceService.list(clusterId).execute().body().getData();
+		List<Service> list = serviceService.list(projectId).execute().body().getData();
 		return list;
 	}
 	
@@ -281,9 +281,9 @@ public class RancherUtils {
 			logger.error("create service failed!");
 	}
 	
-	public List<Secret> listSecret(String clusterId) throws IOException{
+	public List<Secret> listSecret(String projectId) throws IOException{
 		SecretService secretService = client.type(SecretService.class);
-		List<Secret> list = secretService.list(clusterId).execute().body().getData();
+		List<Secret> list = secretService.list(projectId).execute().body().getData();
 		return list;
 	}
 	

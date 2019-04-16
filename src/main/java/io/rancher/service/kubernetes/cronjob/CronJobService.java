@@ -1,4 +1,4 @@
-package io.rancher.service.cronjob;
+package io.rancher.service.kubernetes.cronjob;
 
 import io.rancher.base.Filters;
 import io.rancher.base.TypeCollection;
