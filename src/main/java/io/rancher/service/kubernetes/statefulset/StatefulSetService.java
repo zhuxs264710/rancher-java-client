@@ -27,10 +27,10 @@ public interface StatefulSetService {
   @POST("project/{projectid}/statefulSet")
   Call<StatefulSet> create(@Path("projectid") String projectid,@Body StatefulSet statefulSet);
 
-  @PUT("project/{projectid}/statefulSet/{id}")
+  @PUT("project/{projectid}/workload/{id}")
   Call<StatefulSet> update(@Path("projectid") String projectid,@Path("id") String id, @Body StatefulSet statefulSet);
 
-  @DELETE("project/{projectid}/statefulSet/{id}")
+  @DELETE("project/{projectid}/workload/{id}")
   Call<Response> delete(@Path("projectid") String projectid,@Path("id") String id);
   
 }

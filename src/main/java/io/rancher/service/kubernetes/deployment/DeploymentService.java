@@ -27,10 +27,10 @@ public interface DeploymentService {
   @POST("project/{projectid}/deployment")
   Call<Deployment> create(@Path("projectid") String projectid,@Body Deployment deployment);
 
-  @PUT("project/{projectid}/deployment/{id}")
+  @PUT("project/{projectid}/workload/{id}")
   Call<Deployment> update(@Path("projectid") String projectid,@Path("id") String id, @Body Deployment deployment);
 
-  @DELETE("project/{projectid}/deployment/{id}")
+  @DELETE("project/{projectid}/workload/{id}")
   Call<Response> delete(@Path("projectid") String projectid,@Path("id") String id);
   
 }

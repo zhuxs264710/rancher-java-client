@@ -27,10 +27,10 @@ public interface DaemonSetService {
   @POST("project/{projectid}/daemonSet")
   Call<DaemonSet> create(@Path("projectid") String projectid,@Body DaemonSet daemonSet);
 
-  @PUT("project/{projectid}/daemonSet/{id}")
+  @PUT("project/{projectid}/workload/{id}")
   Call<DaemonSet> update(@Path("projectid") String projectid,@Path("id") String id, @Body DaemonSet daemonSet);
 
-  @DELETE("project/{projectid}/daemonSet/{id}")
+  @DELETE("project/{projectid}/workload/{id}")
   Call<Response> delete(@Path("projectid") String projectid,@Path("id") String id);
   
 }

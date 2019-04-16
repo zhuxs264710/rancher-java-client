@@ -41,15 +41,7 @@ public class RancherUtils {
 	static ConcurrentHashMap<String, RancherUtils> RANCHERSMAP = new ConcurrentHashMap<>();
 	private RancherClient client;
 	private static final Logger logger = Logger.getLogger(RancherUtils.class);
-//	private Object service;
-//
-//	public Object getService() {
-//		return service;
-//	}
-//
-//	public void setService(Object service) {
-//		this.service = service;
-//	}
+
 
 	public RancherClient getClient() {
 		return client;
@@ -96,7 +88,6 @@ public class RancherUtils {
 			return RANCHERSMAP.get(key);
 		
 		RancherClient rancherClient = new RancherClient(config);
-//		Call<TypeCollection<Object>> type = rancherClient.type(service);
 		
 		return new RancherUtils(rancherClient);
 
